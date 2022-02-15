@@ -20,7 +20,6 @@ const Home = () => {
 
   const getMovies = async () => {
     let type = listType === 'popular' ? 'popular' : 'now_playing'
-
     const movies = await axios.get(
       `${baseUrl}/3/movie/${type}?api_key=${API_KEY}&language=en_Us&page=${page}`
     )

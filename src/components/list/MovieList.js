@@ -3,7 +3,7 @@ import { FlatList, Pressable } from 'react-native'
 import CustomCard from '../card/Card'
 
 
-const MovieList = ({ data, onScrollEnd, onOpenMovie }) => {
+const MovieList = ({ data, onEndReached, onOpenMovie }) => {
 
 const renderItem = ({ item }) => {
     const { id, original_title, poster_path, vote_average, overview } = item
@@ -24,7 +24,7 @@ const renderItem = ({ item }) => {
       data={data}
       renderItem={renderItem}
       keyExtractor={item => item.id}
-      onEndReached={onScrollEnd}
+      onEndReached={onEndReached}
     />
   )
 }

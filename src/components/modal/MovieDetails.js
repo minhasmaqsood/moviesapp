@@ -7,7 +7,6 @@ import env from '../../config/Env';
 const MovieDetails = ({modalVisible, handleClose, movieId}) => {
   const {baseUrl, API_KEY, imageUrl} = env;
   const [movie, setMovie] = useState({});
-  console.log('Movie Id', movieId);
 
   useEffect(() => {
     getMovie();
