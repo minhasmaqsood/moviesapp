@@ -40,7 +40,7 @@ const MovieDetails = ({modalVisible, handleClose, movieId}) => {
             <Card.Title h5>{movie?.tagline}</Card.Title>
             <LinearProgress
               style={{marginVertical: 10, color: 'red'}}
-              value={movie?.vote_average / 10}
+              value={movie?.vote_average? movie?.vote_average / 10: 0}
               variant="determinate"
               color="#1E8C4A"
             />

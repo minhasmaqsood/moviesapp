@@ -57,7 +57,6 @@ const Home = () => {
         data={data}
         onEndReached={onScrollEnd}
         onOpenMovie={id => {
-          console.log(id)
           setSelectedMovie(id)
           setShowDetail(true)
         }}
